@@ -9,14 +9,24 @@ import { useRouter } from 'vue-router'
     const router = useRouter()
 
     const onLogin = () => {
-        if(username.value == ''|| password.value == ''){
-            alert("Tolong lengkapi Username dan Password Anda")
-        }else{
-            auth.login(username.value, password.value)
-            router.push('/')
-        }
-    }
+
+  const response axios({
+  method: 'get',
+  url: 'http://localhost:3000/about',
+});
+
+console.log(response)
+
+        //if(username.value == ''|| password.value == ''){
+            //alert("Tolong lengkapi Username dan Password Anda")
+        };//else{
+            //auth.login(username.value, password.value)
+            //router.push('/')
+        //}
+    //}
     
+
+
 </script>
 
 <template>
